@@ -1,0 +1,100 @@
+/* Home.css */
+
+.table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.serial {
+    width: 5%;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.action {
+    width: 15%;
+}
+
+.edit-btn {
+    height: 30px;
+    width: 70px;
+    background-color: rgb(77, 77, 245);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    height: 30px;
+    width: 70px;
+    background-color: rgb(237, 58, 26);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.heading-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.logout-btn{
+    height: 30px;
+    width: 70px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
