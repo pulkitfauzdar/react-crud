@@ -9,7 +9,8 @@ const RegisterForm = ({ userToBeEdited, btnType, setOpen, indexToBeEdited, getTa
         phone: "",
         city: "",
         password: "",
-    })
+    });
+    const [isToast, setIsToast] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -28,27 +29,60 @@ const RegisterForm = ({ userToBeEdited, btnType, setOpen, indexToBeEdited, getTa
     const handleFormSubmit = (e) => {
         e.preventDefault();
 
+
         if (formData.userName === "") {
-            toast.warn("Please enter Username..!!");
-            return;
+            if (!isToast) {
+                toast.warn("Please enter Username..!!");
+                setIsToast(true);
+                setTimeout(() => {
+                    setIsToast(false);
+                }, 4000)
+                return;
+            }
         }
         if (formData.email === "") {
-            toast.warn("Please enter Email..!!");
-            return;
+            if (!isToast) {
+                toast.warn("Please enter Email..!!");
+                setIsToast(true);
+                setTimeout(() => {
+                    setIsToast(false);
+                }, 4000)
+                return;
+            }
         }
         if (formData.phone === "") {
-            toast.warn("Please enter Phone..!!");
-            return;
+            if (!isToast) {
+                toast.warn("Please enter Phone..!!");
+                setIsToast(true);
+                setTimeout(() => {
+                    setIsToast(false);
+                }, 4000)
+                return;
+            }
         }
         if (formData.city === "") {
-            toast.warn("Please enter City..!!");
-            return;
+            if (!isToast) {
+                toast.warn("Please enter City..!!");
+                setIsToast(true);
+                setTimeout(() => {
+                    setIsToast(false);
+                }, 4000)
+                return;
+            }
         }
         if (formData.password === "") {
-            toast.warn("Please enter Password..!!");
-            return;
+            if (!isToast) {
+                toast.warn("Please enter Password..!!");
+                setIsToast(true);
+                setTimeout(() => {
+                    setIsToast(false);
+                }, 4000)
+                return;
+            }
         }
-
+        if (isToast) {
+            return
+        }
         const userData = JSON.parse(localStorage.getItem("user_data")) || [];
 
         if (btnType === "Edit") {
